@@ -294,7 +294,7 @@ function getAiAnalysis_(text) {
  * @private
  */
 function logDataToSheet_(file, data) {
-  const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(${SHEET_TAB_NAME});
+  const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(SHEET_TAB_NAME);
   sheet.appendRow([
     data.date || '',
     data.speaker || '',
@@ -317,7 +317,7 @@ function logDataToSheet_(file, data) {
  * @private
  */
 function getProcessedPdfLinks_() {
-  const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(${SHEET_TAB_NAME});
+  const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(SHEET_TAB_NAME);
   if (sheet.getLastRow() < 2) {
     return new Set(); // Return an empty set if there are no data rows
   }
